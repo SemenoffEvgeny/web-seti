@@ -22,5 +22,5 @@ $router->post('/register','AuthController@register');
 $router->post('/login','AuthController@login');
 
 $router->middleware('auth:api')->group(function() use ($router) {
-
+    $router->post('tutor/create', 'TutorController@create');
 });
